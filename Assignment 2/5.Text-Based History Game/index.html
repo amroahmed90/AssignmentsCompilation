@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>Text-Based Game</title>
+        <style>
+            h1{margin-top: 200px;}
+            .questions{font-size: 25px; font-style: bold;}
+            .choices{font-size: 16px; color: blue; font-style: italic;}
+            .answers{font-size: 28px; color: darkred; font-style: bold;}
+        </style>
+    </head>
+    <body>
+
+        <h1>One day, you went down on a walk, and found a time machine at your doorstep!</h1>
+        <h2><i>(To exit the game, type "end" any time!)</i></h2>
+        <hr>
+
+        <div class="answers">
+
+        </div>
+
+        <div class="questions">
+            What would you do?
+        </div>
+
+        <div class="choices">
+            1- set on time machine    2- Ignore time machine    3- End game
+        </div>
+
+
+        <script>
+
+            //setting the first question and answer
+            var a1 = prompt('What would you like to do?\n1- Sit on time machine.\n2- Ignore time machine.\n3- End game.');
+
+
+            if (a1==='1') {
+                document.querySelector('.answers').textContent = 'You sat on the time machine.';
+                document.querySelector('.questions').textContent = 'Which year do you wanna set it on?';
+                document.querySelector('.choices').textContent = 'e.g. "593"; or "-2034" for BC';
+                var a2 = prompt('You sat on the machine!\nWhich year do you wanna set it on?\ne.g. "593"; or "-2034" for BC')
+            }
+
+            else if (a1==='2') {
+                document.querySelector('.answers').textContent = 'Your funeral! You missed a lot of fun!';
+                document.querySelector('.questions').textContent = "";
+                document.querySelector('.choices').textContent = "";
+            }
+
+            else if (a1 === '3'||a1=='end') {
+                document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                document.querySelector('.questions').textContent = "";
+                document.querySelector('.choices').textContent = "";
+            }
+
+            else {
+                document.querySelector('.answers').textContent = 'Wrong choice! Refresh page and try again';
+                document.querySelector('.questions').textContent = "";
+                document.querySelector('.choices').textContent = "";
+            }
+
+            //setting the second question and answer
+
+            a2 = a2*1;
+
+            //0th possible choice
+
+            if (a2<-1000000) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself on a lake along side with dinosaurs.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Carefully and quitely, Run away!\n2- Stay in place and dont make a sound';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a dark, cold cave. \nWhat would you do next?\n1- Carefully and quitely, Run away!\n2- Stay in place and dont make a sound');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You manage to run away. But as you walk, a Pterosaur (flying dinosaur) picks you up and grills you and feeds you to its kids. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'As you are staying quitely, a dinosaur smashes you under its feet as it walks without seeing you! Oops, Sorry!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //first possible choice
+
+            if (a2>-1000000&&a2<-6000) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a dark, cold cave.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1-Go out to Look for wood to build fire\n2- Stay in the cave and look for cover';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a dark, cold cave. \nWhat would you do next?\n1-Go out to Look for wood to build fire\n2- Stay in the cave and look for cover');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'While you are out, a beast attacks you and you die. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'You tremble of cold. After a while a snake, that you dont see, bites you and poisons you. You die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //second possible choice
+
+            else if (a2>=-6000&&a2<=-3000) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in the local market of Memphis City, the Capital of lower Egypt.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1-You ask one of the traders to sell you food.\n2- You knock on one of the neighboring doors';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in the local market of Memphis City, the Capital of lower Egypt. \nWhat would you do next?\n1-You ask one of the traders to sell you food.\n2- You knock on one of the neighboring doors');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'After you give him your weird banknotes, he gets suspecious. He takes you to the great Pharoh. The Pharoh cannot communicate with you. He decides to get you killed! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'One of the house residents opens the door for you. He sees you in weird clothes. You fail to communicate with him. He thinks you are a theif. He grabs his Huti (spear) and stabs you with it. You die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //third possible choice
+
+            else if (a2>-3000&&a2<=0) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in the local market of Sparta City, in the Roman Empire.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1-You ask one of the traders to sell you food.\n2- You knock on one of the neighboring doors';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in the local market of Sparta, a city in the Roman Empire. \nWhat would you do next?\n1-You ask one of the traders to sell you food.\n2- You knock on one of the neighboring doors');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'After you give him your weird banknotes, he gets suspecious. He takes you to the great Empror. The Empror cannot communicate with you. He decides to slaughter you as a sacrifice to Zues! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'One of the house residents opens the door for you. He sees you in weird clothes. You fail to communicate with him. He thinks you are a theif. He draws his Gladius (sword) and stabs you with it while shouting: "This is Spartaaa". You die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //forth possible choice
+
+            else if (a2>=0&&a2<600) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a crowd crussifying someone!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Shout:"This is not the real Jesus!.\n2- Throw stones with the crowd!';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a crowd crussifying someone! \nWhat would you do next?\n1- Shout:"This is not the real Jesus!\n2- Throw stones with the crowd!');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'When you shout saying that, the people in the crowd take you and put you on a cross and crussify you along with the fake Jesus! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'One of the crowd behind you throws a stone at you by mistake and kills you. You go to hell!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //fifth possible choice
+
+            else if (a2>=600&&a2<700) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Mecca. You see people throwing stones at someone who claims to be a prophet!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Shout:"I believe him"!.\n2- Ask them to stop and hear the man first';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Mecca. You see people throwing stones at someone who claims to be a prophet! \nWhat would you do next?\n1- Shout:"I believe him"!\n2- Ask them to stop and hear the man first');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'When you shout saying that, the people in the crowd start stoning you until you die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'When you do that, the people in the crowd start stoning you until you die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //6th possible choice
+
+            else if (a2>=700&&a2<1700) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Baghdad. You see a man standing on a high building with two wings on his back. People surrounding him shouting: "Come on down, Abbas! Do not do this!"';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Shout:"Abbas! You forgot to calculate for the landing"!.\n2- Go up, force him to give you the wings and try to fly with them.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Baghdad. You see a man standing on a high building with two wings on his back. People surrounding him shouting: "Come on down, Abbas! Do not do this!"\nWhat would you do next?\n1- Shout:"Yo Abbas! You forgot to calculate for the landing"!.\n2- Go up, force him to give you the wings and try to fly with them.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You help Abbas Bin Farnas to finish his calculations and set the course of history right! Now the first man to fly is Abbas bin Farnas; Not the brothers!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'You become the first man to fly! Unfortunately, you cannot use the prototype so you fall and die! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //7th possible choice
+
+            else if (a2>=1700&&a2<1800) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Paris in the middle of the French Revolution. The crowds are demanding for their rights and the troops of the king surround you';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Protest with the people.\n2- Go and join the troops';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Paris in the middle of the French Revolution. The crowds are demanding for their rights and the troops of the king surround you\nWhat would you do next?\n1- Protest with the people.\n2- Go and join the king troops');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You Protest with the people. One of the king troops arrests you. You are put in prison for a while and then sentenced to death! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'The king admits you as one of the troops. You get promoted for your loyalty to the king. You become rich and famous. When the Revolution wins, the crowds kidnap you and hang you!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //8th possible choice
+
+            else if (a2>=1800&&a2<1914) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in an automobile factory in England after the Industrial Revolution. The factory owner approaches you and asks you if you can run the machines';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Dazzle him with your advanced education\n2- Tell him you cannot';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in an automobile factory in England after the Industrial Revolution. The factory owner approaches you and asks you if you can run the machines\nWhat would you do next?\n1- Dazzle him with your advanced education\n2- Tell him you cannot');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'The owner is dazzled by your advanced ideas and decides to promote you. You make a lot of achievements. One day, you die in an industrial accident. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'The factory owner pulls out his gun and shoots you. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //9th possible choice
+            else if (a2>=1914&&a2<1918) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a battlefield in Ardennes Region in France. The First World War is on fire!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Pick up a weapon and fight the Germans.\n2- Take cover.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a battlefield in Ardennes Region in France. The First World War is on fire!\n1- Pick up a weapon and fight the Germans.\n2- Take cover.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You fight bravely until a German soldier shoots you. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'While you are undercover, a German air strike kills you and your troop. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //10th possible choice
+            else if (a2>=1918&&a2<1939) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Berlin, Germany. The Zionist party is in control';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Go to a fancy restoraunt to have lunch.\n2- Tell a man passing-by:"I hate Hitler"';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Berlin, Germany. The Zionist party is in control.\n1- Go to a fancy restoraunt to have lunch.\n2- Tell a man passing-by:"I hate Hitler"');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You enter this amazing restoraunt that has some delicious dishes. After a while, Hitler troops break into the restoraunt and shoot everyone to death. Turns out, the restoraunt is owned by a Jewish business man, Mr. Lucky!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'He tells on you. Hitler troops take you and put you in one of the Nazi Concentration Camps where they set everyone on fire! You had a good run!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //11th possible choice
+            else if (a2>=1939&&a2<1945) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a battlefield in Ardennes Region in France. The Second World War is on fire!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Pick up a weapon and fight the Germans.\n2- Take cover.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a battlefield in Ardennes Region in France. The Second World War is on fire!\n1- Pick up a weapon and fight the Germans.\n2- Take cover.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You fight bravely until a German soldier shoots you. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'While you are undercover, a German air strike kills you and your troop. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //12th possible choice
+            else if (a2>=1945&&a2<1948) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a house in Ramalla, Palestine. Migrating violent Jewish groups are forcing everyone to sell their homes or die!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Sell your house.\n2- Refuse to sell your house!';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a house in Ramalla, Palestine. Migrating violent Jewish groups are forcing everyone to sell their homes or die!\n1- Sell your house.\n2- Refuse to sell your house!');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'They give you a lot of money. You and your family leave your house and find another place to stay. On the next day, another violent troop shoots you and your family dead and take your money as well as the new place';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'You refuse to sell your house. They shoot you and your family dead. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //13th possible choice
+            else if (a2=='1948') {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in a battlefield near to Haifa in Palestine. The Arab-Israeli War is on fire!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Pick up a weapon and fight the Israelis.\n2- Take cover.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in a battlefield in Haifa in Palestine. The Arab-Israeli War is on fire!\n1- Pick up a weapon and fight the Israelis.\n2- Take cover.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You fight bravely until an Israeli soldier shoots you. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'While you are undercover, an Israeli air strike kills you and your troop. RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //14th possible choice
+            else if (a2>=1949&&a2<1967) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in the tropical forest of Amazon, on the borders between Brazil and Argentina! You are surrounded by wild beasts!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Look for a weapon on the ground.\n2- Climb a tree.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in the tropical forest of Amazon, on the borders between Brazil and Argentina! You are surrounded by wild beasts!\n1- Look for a weapon on the ground.\n2- Climb a tree.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You find a stone, you pick it up and throw it at one of the beasts. It only makes it angrier. It attacks you and takes you down! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'Smart! A tree is safer. Except it is not! A group of monkeys throw coconuts at you. One of the coconuts hits your head. You fail off the tree. The beasts cut you open! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //15th possible choice
+            else if (a2>=1967&&a2<=1973) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Sinia, Egypt, surrounded by soldiers from the Egyptian Army. There is an Israeli attack!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Look for a weapon on the ground.\n2- Take cover.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Sinia, Egypt, surrounded by soldiers from the Egyptian Army. There is an Israeli attack!\n1- Look for a weapon on the ground.\n2- Climb a tree.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You managed, with your troops to keep the Israeli raid away from your territory! Now, thanks to you, the Israelis could not envaid Sinia! Historians acknowledge your sacrifice!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'After the victory of the Egyptian Army, the commander, Saad Eldin Elshazly, spots you hiding. He puts you in prison for the rest of your life for your cowardness! See you!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //16th possible choice
+            else if (a2>1973&&a2<1980) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in some wedding party. You look at the "Koosha", you see your young father and mother getting maried!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- You go to your parents and introduce yourself.\n2- You set back and enjoy the wedding.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in some wedding party. You look at the "Koosha", you see your young father and mother getting maried!\n1- You go to your parents and introduce yourself.\n2- You set back and enjoy the wedding.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'They do not believe you at first. But since you are very convincing, you manage to make them believe. They decide not to go through with the wedding after they see their horrible child. So in the future, you will never be born!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'At the wedding, you see a girl. She falls in love with you. But later, you discover that she is you aunt and you have to break things off! Saved it!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //17th possible choice
+            else if (a2>=1980&&a2<=2010) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in Kuala Lumpur, Malaysia. The current prime minister is Dr. Mahadhir Mohammad! People like him and follow his vision for a better Malaysia.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- You decide to put your advanced information to use and start a political party.\n2- You get in contact with Dr. M. and give him insightful opinions.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in Kuala Lumpur, Malaysia. The current prime minister is Dr. Mahadhir Mohammad! People like him and follow his vision for a better Malaysia!\n1- You decide to put your advanced information to use and start a political party.\n2- You get in contact with Dr. M. and give him insightful opinions.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'Because of your knowledge in probaganda techniques, you manage to get the majority in the elections. But, since you know nothing about the Malaysian nature, you fail to put Malaysia on the right track. The people are fed up with you. You lose in the next elections. Thanks to you Malaysia is now set 10 years back!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'Dr. M gets amazed by your opinions. you manage to accelerate the progress of the country. Now Malaysia is a first-world country. You are given the title of Datuk!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //18th possible choice
+            else if (a2>=2011&&a2<2016) {
+                document.querySelector('.answers').textContent = "You are in the year "+a2+". People of the middle east do not really get what is happening in this period (2011-2016). So why don't you refresh the page and try a different entry?!";
+                document.querySelector('.questions').textContent = '';
+                document.querySelector('.choices').textContent = '';
+
+            }
+
+            //19th possible choice
+            else if (a2>=2016&&a2<=2040) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself the CEO of a leading programming company in the UK! There is a lot of advanced technologies and languages that you do not know!';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- You decide to take intensive programming courses.\n2- You decide to ignore the changes and move on as a CEO.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself the CEO of a leading programming company in the UK! There is a lot of advanced technologies and languages that you do not know!\n1- You decide to take intensive programming courses.\n2- You decide to ignore the changes and move on as a CEO.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'You cannot get a long with the courses, because the instructors are no Bahia, Sondos nor Karim! Your employees start calling you idiot and your company goes bankrupt!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'Your employees start calling you idiot and your company goes bankrupt!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+            //20th possible answer
+
+            else if (a2>2040) {
+                document.querySelector('.answers').textContent = 'You are in the year '+a2+'. You find yourself in London, England. The city is now run by robots and there is no one on feet to ask.';
+                document.querySelector('.questions').textContent = 'What would you do next?';
+                document.querySelector('.choices').textContent = '1- Ask a robot about directions.\n2- Wander the city with no goal in mind.';
+                var a3 = prompt('You are in the year '+a2+'. You find yourself in London, England. The city is now run by robots and there is no one on feet to ask.\n1- Ask a robot about directions.\n2- Wander the city with no goal in mind.');
+
+                if (a3==='1') {
+                    document.querySelector('.answers').textContent = 'The robot does not like your attitude and decides to beat you up! Good luck wrestling with a robot!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='2') {
+                    document.querySelector('.answers').textContent = 'You unkowingly walk in a restricted area for walkers. A fast flying vehicle hits your head. Your head blows up! RIP!';
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+                else if (a3==='end') {
+                    document.querySelector('.answers').textContent = "Mission Aborted! You are back to "+Date()+" and you are setting at Novelari's office in the Smart Village, Egypt!";
+                    document.querySelector('.questions').textContent = "";
+                    document.querySelector('.choices').textContent = "";
+                }
+
+
+            }
+
+        </script>
+    </body>
+</html>

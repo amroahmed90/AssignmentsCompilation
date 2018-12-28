@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Triangle</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            .even{font-weight: bold;}
+            .odd{font-style: italic;}
+            body {
+                background-color: lightgray;
+            }
+            div#container {
+                border: 2px solid black;
+                background-color: white;
+                margin: auto;
+                width: 960px;
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+
+        </div>
+
+        <script type="text/javascript">
+            var input_row = prompt('How many rows do you want?');
+            while (isNaN(input_row)) {
+                input_row = parseInt(prompt('How many rows do you want?'));
+            }
+            var input_char = prompt('If you would like to build up a triangle using a specific character, type it in; otherwise just press enter:')||'default';
+
+            var randomRed = function () {
+                var rand = Math.random()*255;
+                var num = Math.ceil(rand);
+                return num;
+            }
+
+            var randomGreen = function () {
+                var rand = Math.random()*255;
+                var num = Math.ceil(rand);
+                return num;
+            }
+
+            var randomBlue = function () {
+                var rand = Math.random()*255;
+                var num = Math.ceil(rand);
+                return num;
+            }
+
+            var isEven = function(n){
+                if(n%2===0){return true;}
+                else {return false;}
+            }
+
+            var correctClass = function(n){
+                var change;
+                if(isEven(n)){change = 'even';}
+                else {change = 'odd';}
+                return change;
+            }
+
+            var triangle = function(n, c){
+                var row=1;
+                if(input_char==='default'){
+                    while (row<=input_row) {
+                        final_output='';
+                        var column = 1;
+                        var output='';
+                        while (column<=row) {
+                            output=output+'<span style="color:rgb('+randomRed()+','+randomGreen()+','+randomBlue()+')">'+row+'</span>';
+                            column++;
+                        }
+                        row++;
+                        var line_number = 5*row;
+                        var final_output = '<p class="'+correctClass(isEven(row))+'" style="font-size:'+line_number+'px">'+output+'</p>';
+                        $('#container').append(final_output).hide().fadeIn();
+                    }
+                }
+                else {
+                    while (row<=input_row) {
+                        final_output='';
+                        var column = 1;
+                        var output='';
+                        while (column<=row) {
+                            output=output+'<span style="color:rgb('+randomRed()+','+randomGreen()+','+randomBlue()+')">'+input_char+'</span>';
+                            column++;
+                        }
+                        row++;
+                        var line_number = 5*row;
+                        var final_output = '<p class="'+correctClass(isEven(row))+'" style="font-size:'+line_number+'px">'+output+'</p>';
+                        $('#container').append(final_output).hide().fadeIn();
+                    }
+                }
+            }
+
+            triangle(input_row, input_char);
+
+
+        </script>
+
+    </body>
+</html>

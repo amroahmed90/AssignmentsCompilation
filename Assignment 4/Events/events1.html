@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Events</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+        <style media="screen">
+            #target{
+                width: 300px;
+                height: 50px;
+            }
+            .highlighted{
+                background-color: yellow;
+            }
+            #other{
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="target">
+            This should be highlighted on mouseover!
+        </div>
+
+        <br>
+
+        <div id="other">
+            <img  id="magic" src="http://cdn.playbuzz.com/cdn/1fedad7f-8994-4bcc-8e16-894be2f2a1b1/a8f26107-5853-4f34-867e-357aa9487a98.jpg" width="300" height="300" />
+        </div>
+        <script>
+        $('#target').on('mouseover', function(){
+            $('#target').addClass('highlighted')
+        })
+        $('#target').on('mouseleave', function(){
+            $('#target').removeClass('highlighted')
+        })
+
+        $('#magic').on('mouseover', function(){
+            $('#magic').hide();
+        })
+        $('#other').on('mouseleave', function(){
+            $('#magic').show();
+        })
+
+        </script>
+    </body>
+</html>

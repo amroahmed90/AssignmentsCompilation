@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Parrot</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+        for (var i = 0; i < 2; i++) {
+
+        var answer = prompt('What is up nigga?');
+        var question = answer.indexOf('?');
+        var exclamation = answer.search('!');
+        var address = answer.search('parrot');
+        var address2 = answer.search('you');
+
+
+
+        if(question !== -1){
+            alert('Sure')
+        }
+        else if (exclamation !== -1) {
+            alert('Whoa, chill out, dude!')
+        }
+        else if (address !== -1|| address2 !== -1){
+            alert('Fine, be that way!')
+        }
+        else {
+            alert('Whatever, dude!')
+        }
+    }
+
+
+
+        </script>
+    </body>
+</html>

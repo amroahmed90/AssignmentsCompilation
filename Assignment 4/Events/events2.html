@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Events</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+        <input id="color" type="text" name="name" placeholder="Type in a color">
+
+        <button id="go" type="button" name="PrintColor">Change Background</button>
+
+        <br><br>
+
+        <div id="output">
+
+        </div>
+
+        <script>
+        $('button#go').on('click', function(){
+            $('body').css('background-color', $('input#color').val() )
+        })
+
+        </script>
+    </body>
+</html>

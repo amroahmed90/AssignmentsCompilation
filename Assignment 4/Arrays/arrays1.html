@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>First Naddara</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    </head>
+    <body>
+<!--
+        <div id="recipe">
+
+        </div>
+        <br>
+        <div id="bucket_list">
+
+        </div>
+ -->
+
+        <script>
+            var recipe = [];
+            recipe[0]="cup of water";
+            recipe[1]='pour it in the kettle';
+            recipe[2]='heat to boil';
+            recipe[3]='add your favourite amount of sugar';
+            recipe[4]='add your favourite amount of tea';
+            recipe[5]='Enjoy your cup of tea';
+            console.log(recipe[0]);
+            var last_step = recipe.length-1
+            console.log(recipe[last_step]);
+
+            var bucket_list = [];
+            bucket_list[0]="Master's Degree";
+            bucket_list[1]="Score a job at a multinational oil company";
+            bucket_list.push('Be a CEO of a multinational oil company');
+            bucket_list.push('Open a start-up');
+            bucket_list.unshift('learn programming');
+            bucket_list.unshift('Win the Schlumberger competition if France');
+
+            var append_strings = function (argument) {
+                var counter=0, limit=argument.length;
+                while (counter<limit) {
+                    $('body').append('<p>'+((counter*1)+1)+'. '+argument[counter]+'</p>');
+                    counter++;
+                }
+                $('body').append('<br>')
+            }
+
+            append_strings(recipe)
+            append_strings(bucket_list)
+
+
+        </script>
+    </body>
+</html>

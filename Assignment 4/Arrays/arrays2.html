@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>First Naddara</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    </head>
+    <body>
+
+        <script>
+            var biggest_smallest = function (array) {
+                var biggest = array[0];
+                var smallest = array[0];
+                for(var i=1; i<array.length;i++){
+                    if(array[i]>biggest){biggest=array[i];}
+                    else if (array[i]<smallest) {smallest=array[i];}
+                }
+                return [smallest,biggest];
+            }
+            var numbers = [20,34,102,12,119,4543,2002,-32]
+            $('body').append('Main array is: '+numbers+'<br>Min and Max are: '+ biggest_smallest(numbers));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+header{
+    float: right;
+    font-size: 15px;
+}
+
+#links{float: left; margin-left: 50px; margin-top: 50px;}
+body{
+    background: lightgray;
+    font-family: sans-serif;
+}
+#container{
+    width: 960px;
+    height: 960px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+}
+h1{
+    color: blue;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: fantasy;
+    border-bottom: 2px dashed blue;
+}
+.left{
+    width: 270px;
+    float: left;
+}
+.center{
+    width: 400px;
+    float: left;
+}
+.right{
+    width: 200px;
+    float: right;
+}
+img{
+    width: 190px;
+    height: 190px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+#icon{
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+ul {list-style: none;}
+li {
+    min-height: 190px;
+    list-style: none;
+}
+th{
+    width: 100px;
+    text-align: center;
+    border-bottom: 1px dashed black;
+}
+
+td{
+    width: 100px;
+    text-align: center;
+    height: 190px;
+}
+
+#after{
+    margin-top: 690px;
+}
+.total{float: left; margin-left: 100px;}
+.totalprice{float: right;margin-right: 200px;}
+.checkout{margin-left: 200px; border: 2px solid blue; padding: 3px;}
+
+a:hover{
+    color: darkred;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+input:focus{border-color: red;}

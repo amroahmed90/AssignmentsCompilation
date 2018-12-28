@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leap Year?</title>
+    </head>
+    <body>
+
+        <script>
+
+        var year_str = prompt('Please enter the year you want to check\n whether it is a leap year or not:');
+
+        var year = year_str * 1;
+
+        while (isNaN(year)) {
+
+            alert('Bad entry! Please enter a year in numbers!')
+
+            year_str = prompt('Please enter the year you want to check\n weather it is a leap year or not:');
+
+            var year = year_str * 1;
+        }
+
+        if (year%100===0) {
+            if (year%400===0) {
+                alert('Leap year.');
+            }
+            else {
+                alert('Normal year.');
+            }
+        }
+
+        else if (year%4===0) {
+            alert('Leap year.');
+        }
+
+        else {
+            alert('Normal year.');
+        }
+
+        </script>
+    </body>
+</html>

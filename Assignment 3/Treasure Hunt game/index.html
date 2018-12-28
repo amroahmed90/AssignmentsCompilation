@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Treasure Hunt</title>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            h1 {
+                color: darkred;
+                font-family: sans-serif;
+                margin-left: 5px;
+                margin-top: 5px;
+                max-width: 260px;
+                text-align: justify;
+            }
+            img {width: 50px; height: 50px;}
+            table{
+                margin-left: 5px;
+                margin-bottom: 5px;
+            }
+            td, th {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border: 2px solid black;
+            }
+            .end{
+                margin-left: 5px;
+                color: blue;
+                font-family: sans-serif;
+                max-width: 260px;
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Find the treasure before the pirates find it!</h1>
+
+        <table>
+            <tr>
+                <th>Num</th>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+            </tr>
+            <tr>
+                <td><b>1</b></td>
+                <td id="a1"></td>
+                <td id="b1"></td>
+                <td id="c1"></td>
+            </tr>
+            <tr>
+                <td><b>2</b></td>
+                <td id="a2"></td>
+                <td id="b2"></td>
+                <td id="c2"></td>
+            </tr>
+            <tr>
+                <td><b>3</b></td>
+                <td id="a3"></td>
+                <td id="b3"></td>
+                <td id="c3"></td>
+            </tr>
+        </table>
+
+        <h2 class="end"></h2>
+
+        <audio controls autoplay hidden></audio>
+
+
+        <script>
+            var treasureChar = function(){
+                var rand = Math.ceil(Math.random()*3);
+                if (rand===1) {return 'a';}
+                else if (rand===2) {return 'b';}
+                else if (rand===3) {return 'c';}
+            }
+
+            var treasureNum = function () {
+                return Math.ceil(Math.random()*3);
+            }
+
+            var treasurePosition = treasureChar() + treasureNum();
+            var available = 8;
+            console.log(treasurePosition);
+
+            var trial = prompt('Guess where the treasure is?\nExample: a1');
+
+            while (trial!==treasurePosition && available!==1) {
+                available--;
+                $('#'+trial).css('background','red').html('<img src="pirate.jpg" />');
+                trial = prompt('Wrong Guess! Guess again:');
+            }
+
+            if (available===1) {
+                $('#'+trial).css('background','red').html('<img src="pirate.jpg" />');
+                $('audio').attr('src','evillaugh.mp3');
+                $('#'+treasurePosition).html('<img src="treasure.png" />');
+                $('.end').text('Sorry! You failed to rescue the treasure from the pirates! You ran out of trials!');
+            }
+            if(trial===treasurePosition){
+                $('audio').attr('src','cheering.mp3');
+                $('#'+trial).html('<img src="treasure.png" />');
+                $('.end').text('Congratulations! You found the treasure in cell '+treasurePosition+' !').hide().fadeIn(3000);
+            }
+
+        </script>
+    </body>
+</html>

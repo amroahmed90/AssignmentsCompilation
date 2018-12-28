@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Is this your number?</title>
+        <style>
+            h1{margin-top: 150px;}
+            h3{text-align: center;}
+            td{width: 20px; height: 20px; padding: auto; border: solid 3px blue; text-align: center;}
+            .ground{background-color: lightgray;}
+            .a, .b, .c, .e, .d{width = 19%; margin: 10px; float: left;}
+            .fullWidth{min-width: 100%}
+        </style>
+    </head>
+    <body>
+        <h1>Choose a number between 1 and 31. Keep it to yourself!</h1>
+        <h2>Look for your number in each of the following tables, is it there?</h2>
+        <hr>
+
+    <div class="fullWidth">
+    <div class="a">
+        <h3>Table A</h3>
+        <table> <!--Table A-->
+            <tr>
+                <td class="ground">01</td>
+                <td>09</td>
+                <td class="ground">17</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td class="ground">11</td>
+                <td>19</td>
+                <td class="ground">27</td>
+            </tr>
+            <tr>
+                <td class="ground">05</td>
+                <td>13</td>
+                <td class="ground">21</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td class="ground">15</td>
+                <td>23</td>
+                <td class="ground">31</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="b">
+        <h3>Table B</h3>
+        <table><!--Table B-->
+            <tr>
+                <td class="ground">02</td>
+                <td>10</td>
+                <td class="ground">18</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td class="ground">11</td>
+                <td>19</td>
+                <td class="ground">27</td>
+            </tr>
+            <tr>
+                <td class="ground">06</td>
+                <td>14</td>
+                <td class="ground">22</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td class="ground">15</td>
+                <td>23</td>
+                <td class="ground">31</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="c">
+        <h3>Table C</h3>
+        <table class="tables"><!--Table C-->
+            <tr>
+                <td class="ground">04</td>
+                <td>12</td>
+                <td class="ground">20</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td class="ground">13</td>
+                <td>21</td>
+                <td class="ground">29</td>
+            </tr>
+            <tr>
+                <td class="ground">06</td>
+                <td>14</td>
+                <td class="ground">22</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td class="ground">15</td>
+                <td>23</td>
+                <td class="ground">31</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="d">
+        <h3>Table D</h3>
+        <table class="tables"><!--Table D-->
+            <tr>
+                <td class="ground">08</td>
+                <td>12</td>
+                <td class="ground">24</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td class="ground">13</td>
+                <td>25</td>
+                <td class="ground">29</td>
+            </tr>
+            <tr>
+                <td class="ground">10</td>
+                <td>14</td>
+                <td class="ground">26</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td class="ground">15</td>
+                <td>27</td>
+                <td class="ground">31</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="e">
+        <h3>Table E</h3>
+        <table class="tables"><!--Table E-->
+            <tr>
+                <td class="ground">16</td>
+                <td>20</td>
+                <td class="ground">24</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td class="ground">21</td>
+                <td>25</td>
+                <td class="ground">29</td>
+            </tr>
+            <tr>
+                <td class="ground">18</td>
+                <td>22</td>
+                <td class="ground">26</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td class="ground">23</td>
+                <td>27</td>
+                <td class="ground">31</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+        <script>
+            var a=0, b=0, c=0, d=0, e=0;
+
+            var q1 = prompt('Choose a number between 1 and 31. Keep it to yourself!\nIs the number you chose in Table A? y/n?');
+            if (q1=='y'){a=1;}
+
+            var q2 = prompt('Is the number you chose in Table B? y/n?');
+            if (q2=='y'){b=2;}
+
+            var q3 = prompt('Is the number you chose in Table C? y/n?');
+            if (q3=='y'){c=4;}
+
+            var q4 = prompt('Is the number you chose in Table D? y/n?');
+            if (q4=='y'){d=8;}
+
+            var q5 = prompt('Is the number you chose in Table E? y/n?');
+            if (q5=='y'){e=16;}
+
+            var finalAnswer= a + b + c + d + e;
+            alert('The number you secretly chose is: '+finalAnswer+' ... Ta Da!!')
+        </script>
+    </body>
+</html>

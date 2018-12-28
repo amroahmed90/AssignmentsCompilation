@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 1 Gs Anniversary</title>
+    </head>
+    <body>
+
+        <script>
+            var day = prompt('On what day were you born?\n(eg. 21)');
+
+            if (day>31||day<1||isNaN(day))
+            {
+                alert('Wrong input! Please try again!');
+                day = prompt('On what day were you born?\n(eg. 21)');
+            }
+
+            var month = prompt('On what month were you born?\n(eg. 6)');
+
+            if (month>12||month<1||isNaN(day)){
+                alert('Wrong input! Please try again!');
+                month = prompt('On what month were you born?\n(eg. 6)');
+            }
+
+            var year = prompt('On what year were you born?\n(eg. 1990)');
+
+            if (year<1||isNaN(day)) {
+                alert('Wrong input! Please try again!');
+                year = prompt('On what year were you born?\n(eg. 1990)');
+            }
+
+            day = day*1;
+            month= month*1;
+            year=year*1;
+
+            var day_tr = day + 19;
+            var month_tr = month + 7;
+            var year_tr = year + 25;
+
+            var day_f, month_f, year_f;
+
+
+            if (day_tr>30) {
+                day_f = day_tr - 30;
+                month_f = month_tr + 1;
+            }
+            else{
+                day_f = day_tr;
+                month_f = month_tr;
+            }
+
+            if (month_f>12) {
+                month_f = month_f - 12;
+                year_f = year_tr + 1;
+            }
+
+            else {
+                year_f = year_tr;
+            }
+
+            alert('Your 1 Gs Anniversary is going to be on: ' + day_f + '/' + month_f + '/' + year_f);
+
+            console.log(day_f);
+            console.log(month_f);
+            console.log(year_f);
+
+        </script>
+    </body>
+</html>
